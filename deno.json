@@ -1,0 +1,39 @@
+{
+    "name": "@gnome/deno-cli",
+    "version": "0.0.0",
+    "exports": {
+        ".": "./mod.ts",
+        "./deno": "./deno.ts"
+    },
+    "compilerOptions": {
+        "lib": ["deno.worker"]
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "useTabs": false,
+        "lineWidth": 120,
+        "exclude": ["**/*.md"]
+    },
+
+    "tasks": {
+        "test": "deno test -A",
+        "coverage": "deno test --coverage=.artifacts/code-coverage -A",
+        "lcov": "deno coverage .artifacts/code-coverage --lcov > .artifacts/code-coverage.lcov",
+        "publish:test": "deno publish --dry-run --allow-dirty"
+    },
+
+    "publish": {
+        "include": [
+            "mod.ts",
+            "deno.ts",
+            "README.md",
+            "LICENSE.md",
+            "deno.json"
+        ]
+    },
+    "imports": {
+        "@gnome/exec": "jsr:@gnome/exec@^0.4.1",
+        "@gnome/fs": "jsr:@gnome/fs@^0.1.0",
+        "@std/path": "jsr:@std/path@^0.225.1"
+    }
+}
