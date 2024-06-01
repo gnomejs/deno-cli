@@ -29,4 +29,4 @@
  * 
  * @module
  */
-export * from "./deno.ts";
+export * from "./cli.ts";

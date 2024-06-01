@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "exports": {
         ".": "./mod.ts",
-        "./deno": "./deno.ts"
+        "./deno": "./cli.ts"
     },
     "compilerOptions": {
         "lib": ["deno.worker"]
@@ -25,7 +25,7 @@
     "publish": {
         "include": [
             "mod.ts",
-            "deno.ts",
+            "cli.ts",
             "README.md",
             "LICENSE.md",
             "deno.json"

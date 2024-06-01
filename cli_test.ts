@@ -1,4 +1,4 @@
-import { deno, denoCli } from "./deno.ts";
+import { deno, denoCli } from "./cli.ts";
 import { remove, writeTextFile } from "@gnome/fs";
 import { assert as ok, assertEquals as equals } from "jsr:@std/assert@0.225.3";
 
